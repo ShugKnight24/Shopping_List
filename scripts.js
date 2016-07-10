@@ -1,3 +1,4 @@
+// Playing with the concept of an accordion in Javascript
 accoridon = document.getElementById("accordion");
 titles = accordion.getElementsByTagName("h2");
 

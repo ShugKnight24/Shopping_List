@@ -19,8 +19,7 @@
   font-size: 2em;
 }
 
-#collapse1, #collapse2, #collapse3 {
+#collapse1, #collapse2, #collapse3, #collapse4{
   display: none;
   font-size: 1.5em;
-  font-weight: bold;
 }
