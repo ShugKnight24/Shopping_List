@@ -1,0 +1,26 @@
+.basket {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+#accordion {
+  position: relative;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+#accordion h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
+#accordion h2 {
+  font-size: 2em;
+}
+
+#collapse1, #collapse2, #collapse3 {
+  display: none;
+  font-size: 1.5em;
+  font-weight: bold;
+}
