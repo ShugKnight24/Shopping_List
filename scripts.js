@@ -38,7 +38,7 @@ function addGroceries(){
 	// growingFoodList.innerHTML = newItem;
 
 // Add <li> to #growingPriceList
-	document.getElementById("growingPriceList").innerHTML += "<li>" + newPrice + "</li>";
+	document.getElementById("growingPriceList").innerHTML += "<li>" + "$" + newPrice + "</li>";
 	// Was overwriting the former with the latter. Need to figure this out
   //growingPriceList.innerHTML = newPrice;
 

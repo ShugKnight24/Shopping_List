@@ -35,7 +35,7 @@
   font-weight: bold;
 }
 
-#growingFoodList, #growingPriceList, #total {
+#growingFoodList, #growingPriceList, #totalPrice {
   color: black;
   font-weight: bold;
   text-align: left;
