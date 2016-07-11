@@ -24,20 +24,25 @@ var shoppingList = [];
 var total = 0.00
 
 // Make Total display initially
-document.getElementById('totalPrice').innerHTML += ("Your total grocery bill is: $" + total.toFixed(2));
+document.getElementById('totalPrice').innerHTML = ("Your total grocery bill is: $" + total.toFixed(2));
 
 // Target the form to add items, price, and their quantity
 function addGroceries(){
 	var newItem = document.getElementById("foodToAdd").value;
 	var newPrice = document.getElementById("priceToAdd").value;
-  var newQuant = document.getElementById("quantToAdd").value;
+//  var newQuant = document.getElementById("quantToAdd").value;
 
-  document.getElementById("growingFoodList").innerHTML += "<li>" + newItem + "<li>";
-	growingFoodList.innerHTML = newItem;
+// Add <li> to #growingFoodList
+  document.getElementById("growingFoodList").innerHTML += "<li>" + newItem + "</li>";
+  // Was overwriting the former with the latter. Need to figure this out
+	// growingFoodList.innerHTML = newItem;
 
-	document.getElementById("growingPriceList").innerHTML += "<li>" + newPrice + "<li>";
-	growingPriceList.innerHTML = newPrice.toFixed(2);
+// Add <li> to #growingPriceList
+	document.getElementById("growingPriceList").innerHTML += "<li>" + newPrice + "</li>";
+	// Was overwriting the former with the latter. Need to figure this out
+  //growingPriceList.innerHTML = newPrice;
 
+// Continuously update the total everytime a new item is added
 total += Number(newPrice);
     document.getElementById("totalPrice").innerHTML = ("Your total grocery bill is: $" + total.toFixed(2));
 }

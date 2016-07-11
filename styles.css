@@ -31,5 +31,12 @@
 }
 
 #shoppingForm {
-  text-align: center;
+  text-align: left;
+  font-weight: bold;
+}
+
+#growingFoodList, #growingPriceList, #total {
+  color: black;
+  font-weight: bold;
+  text-align: left;
 }
