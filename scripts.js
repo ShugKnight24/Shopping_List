@@ -1,7 +1,10 @@
 // Playing with the concept of an accordion in Javascript
+// Have it set to manipulate the h2 and their child <p> through DOM
+
 accoridon = document.getElementById("accordion");
 titles = accordion.getElementsByTagName("h2");
 
+// I use a for loop to check on the length of the h2 class.
 for (i=0; i<titles.length;i++){
   titles[i].addEventListener("click", displayAccordion);
 }
@@ -16,70 +19,25 @@ function displayAccordion(){
   }
 }
 
-var name;
-var price;
+// Begin Shopping List Stuff
+var shoppingList = [];
+var total = 0.00
 
-var shoppingList = [
-    {
-      name: "milk",
-      price:2.19
-    },
-    {
-      name: "yogurt",
-      price:0.88
-    },
-    {
-      name: "chicken breast",
-      price: 3.15
-    },
-    {
-      name: "steak",
-      price: 5.00
-    },
-    {
-      name: "rice",
-      price: 1.50
-    },
-    {
-      name: "potatoes",
-      price: 2.25
-    }
-  ];
+// Make Total display initially
+document.getElementById('totalPrice').innerHTML += ("Your total grocery bill is: $" + total.toFixed(2));
 
-var total = 0;
-shoppingList.forEach(function(item) {
-  console.log(item.name);
-  console.log(item.price);
-  total += item.price;
-});
- console.log("total: $"+total.toFixed(2));
+// Target the form to add items, price, and their quantity
+function addGroceries(){
+	var newItem = document.getElementById("foodToAdd").value;
+	var newPrice = document.getElementById("priceToAdd").value;
+  var newQuant = document.getElementById("quantToAdd").value;
 
+  document.getElementById("growingFoodList").innerHTML += "<li>" + newItem + "<li>";
+	growingFoodList.innerHTML = newItem;
 
-/******* Fishbowl test *******/
-// var groceryList = [
-//   {
-//     name: "apples",
-//     price: 1.15
-//   },
-//   {
-//     name: "bananas",
-//     price: 2.00
-//   },
-//   {
-//     name: "chicken",
-//     price: 3.50
-//   }
-// ];
-//
-// groceryList.push ({
-//   name: "ground beef",
-//   price: 5.55
-// });
-//
-// var total = 0;
-// groceryList.forEach(function(item) {
-//   console.log(item.name);
-//   console.log(item.price);
-//   total += item.price;
-// });
-//   console.log("total: $"+total.toFixed(2));
+	document.getElementById("growingPriceList").innerHTML += "<li>" + newPrice + "<li>";
+	growingPriceList.innerHTML = newPrice.toFixed(2);
+
+total += Number(newPrice);
+    document.getElementById("totalPrice").innerHTML = ("Your total grocery bill is: $" + total.toFixed(2));
+}

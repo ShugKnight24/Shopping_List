@@ -17,9 +17,19 @@
 
 #accordion h2 {
   font-size: 2em;
+  text-decoration: underline;
+  color: blue;
+}
+
+#accordion h2:hover {
+  color:red;
 }
 
 #collapse1, #collapse2, #collapse3, #collapse4{
   display: none;
   font-size: 1.5em;
+}
+
+#shoppingForm {
+  text-align: center;
 }
