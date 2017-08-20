@@ -73,7 +73,9 @@ ul {
 }
 
 #food-to-add,
-#price-to-add {
+#price-to-add,
+#quantity-to-add {
+	width: 100px;
 	padding: 10px;
 }
 

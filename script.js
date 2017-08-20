@@ -107,39 +107,58 @@ $(document).ready(function(){
 			newPrice = $('#price-to-add').val(),
 			newQuantity = $('#quantity-to-add').val();
 
-		// Validate that newItem is not null
-		if (newItem === '') {
+		// Validate that values are not null
+		if (newItem === '' || newPrice === '' || newQuantity === '') {
 
-			alert('Please enter a name for the item you are buying');
+			if (newItem === '') {
+
+				alert('Please enter a name for the item you are buying');
+
+			}
+
+			if (newPrice === '') {
+
+				alert('Please enter a price for the item you are buying');
+
+			}
+
+			if (newQuantity === '') {
+
+				alert('Please enter a quantity for the item you are buying');
+
+			}
 
 		}
 
-		// Validate that newPrice is not null
-		if (newPrice === '') {
+		if (newPrice < 0 || newQuantity < 0) {
 
-			alert('Please enter a price for the item you are buying');
+			if (newPrice < 0) {
 
-		}
+				alert('The price must be positive');
 
-		if (newPrice < 0) {
+			}
 
-			alert('The price must be positive');
+			if (newQuantity < 0) {
 
-		} else if ($.isNumeric(newPrice)) {
+				alert('The quantity must be positive');
+
+			}
+
+		} else if ($.isNumeric(newPrice) && $.isNumeric(newQuantity)) {
 
 			// Add <li> to #growing-food-list
 			$growingFoodList.append('<li>' + newItem + ' is</li>');
 
 			// Add <li> to #growingPriceList
-			$growingPriceList.append('<li>' + '$' + newPrice + '</li>');
+			$growingPriceList.append('<li>' + '$' + newPrice  * newQuantity + '</li>');
 
 			// Continuously update the total everytime a new item is added
-			total += parseFloat(newPrice);
+			total += parseFloat(newPrice * newQuantity);
 			$totalPrice.html('Total price: $' + total.toFixed(2));
 
 		} else {
 
-			alert('Please enter a valid number');
+			alert('You must enter a valid number for the price and quantity of your item.');
 
 		}
 
