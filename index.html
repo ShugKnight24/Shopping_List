@@ -1,62 +1,58 @@
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="styles.css">
-  <title>Weekly Shopping List</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Happy+Monkey|Nunito" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<title>Shopping List</title>
 </head>
 <body>
-  <div id="background-image">
-    <img class="basket" src="images/shoppingBasket.jpg"/>
-      <div id="accordion">
-        <h1>The Shopping List App</h1>
-          <h2>The Shopping List Vision</h2>
-          <div id="collapse1">
-            <p>Are you the type of person who struggles in a grocery store? Does the pressure of standing in long aisles of food weight down on you? Have you ever walked in to buy something specfic and walked out with more items than you anticipated? Fear not! Statistics that probably don't exist and definitely cannot be verified say that you are not alone.</p>
-          </div>
-          <h2>My Mission</h2>
-          <div id="collapse2">
-            <p>Does that resonate with you? If it doesn't, you are just far, far superior to the rest of us and don't belong on this web app. If it does, I have dedicated my life to helping people like you. I myself hate grocery stores. Get me Amazon Fresh, and I'll be happy, but for now, these monolithic organizations persist, and we must go there for sustenance. Fear not! There is an app for that!</p>
-          </div>
-          <h2>The Premise</h2>
-          <div id="collapse3">
-            <p>Shopping can be difficult, lists make things easier. Shopping + List = perhaps the greatest technological innovation since <b>sliced bread!</b>(Which you can ironically purchase thanks to this brilliant technological breakthrough!). I created this app so that you can spend as little time as possible in those wretched grocery stores.</p>
-          </div>
-          <h2>How it Works</h2>
-          <div id="collapse4">
-            <p>There is a form below that you can use to enter the food and price of the item you would like to purchase, and my program will do all of the work. It will generate a list for you, add up the prices those items for you!</p>
-          </div>
-        <div id="shoppingForm"
-          <fieldset>
-            <h1>Shopping Made Simple!</h1>
-            <h3>Items to Purchase:</h3>
-              <label class="food" for="text">Type in the food you want to purchase:</label>
-              <input id="foodToAdd" type="text" name="food"/>
-              <br>
-              <label class="price" type="number">Type in the price of that item:</label>
-              <input id="priceToAdd" type="text" name="price"/>
-              <br>
-            <!--  <label class="quant" for="number">Type in the quantity of that item:</label>
-              <input id="quantToAdd" type="text" value="1" name="numberToAdd"/> -->
-              <br>
-              <button type="button" onClick="addGroceries(); return false" Name="addToList">Add to Cart</button>
-          </fieldset>
-        </div>
-        <br>
-        <ul id="growingFoodList">
+	<div id="container">
+		<h1 id="header">Shopping List</h1>
+		<div id="accordion">
+			<h2 id="accordion-title-1">The Vision</h2>
+			<!-- Collapse1 to be open on default -->
+			<div id="collapse-1">
+				<p>Are you the type of person who struggles in a grocery store? Does the pressure of standing in long aisles of food weigh down on you? Have you ever walked in to buy something specfic and walked out with more items than you anticipated? Fear not! Statistics that probably don't exist and definitely cannot be verified say that you are not alone.</p>
+			</div>
+			<h2 id="accordion-title-2">The Mission</h2>
+			<div id="collapse-2" class="hidden">
+				<p>Does that resonate with you? If it doesn't, you are just far, far superior to the rest of us and don't belong on this web app. If it does, I have dedicated my life to helping people like you. I myself hate grocery stores. Get me Amazon Fresh, and I'll be happy, but for now, these monolithic organizations persist, and we must go there for sustenance. Fear not! There is an app for that!</p>
+			</div>
+			<h2 id="accordion-title-3">The Premise</h2>
+			<div id="collapse-3" class="hidden">
+				<p>Shopping can be difficult, lists make things easier. Shopping + List = perhaps the greatest technological innovation since <b>sliced bread!</b>(Which you can ironically purchase thanks to this brilliant technological breakthrough!). I created this app so that you can spend as little time as possible in those wretched grocery stores.</p>
+			</div>
+			<h2 id="accordion-title-4">How it Works</h2>
+			<div id="collapse-4" class="hidden">
+				<p>There is a form below that you can use to enter the food and price of the item you would like to purchase, and my program will do all of the work. It will generate a list for you, add up the prices those items for you!</p>
+			</div>
+		</div>
+		<div id="shopping-list-form">
+			<h1>Shopping Made Simple!</h1>
+			<h3>Items to Purchase:</h3>
+			<!-- <label class="food" for="text">Food to purchase:</label> -->
+			<input id="food-to-add" type="text" name="food" placeholder="Food item">
+			<!-- <label class="price" type="number">Price of the item:</label> -->
+			<input id="price-to-add" type="text" name="price" placeholder="Price">
+			<!--  <label class="quant" for="number">Type in the quantity of that item:</label>
+			<input id="quantToAdd" type="text" value="1" name="numberToAdd"/> -->
+			<a id="add-groceries" Name="add-to-list">Add to Cart</a>
+		</div>
+		<div id="lists-container">
+			<ul id="growing-food-list">
 
-        </ul>
+			</ul>
+			<ul id="growing-price-list">
 
-        <ul id="growingPriceList">
+			</ul>
+		</div>
+		<div id="total-price">
 
-        </ul>
-
-        <div id="totalPrice">
-
-        </div>
-      </div>
-  </div>
-<script type="text/javascript" src="scripts.js"></script>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>

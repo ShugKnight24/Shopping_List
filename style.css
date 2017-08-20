@@ -1,0 +1,103 @@
+body {
+	font-family: 'Nunito', sans-serif;
+	color: #07070A;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul {
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-padding-start: 0;
+}
+
+#container {
+	text-align: center;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+#header {
+	font-family: 'Happy Monkey', cursive;
+	font-size: 3rem;
+}
+
+#accordion {
+	margin: 0 auto;
+	max-width: 768px;
+	font-family: sans-serif;
+}
+
+#accordion h2 {
+	font-size: 2rem;
+	color: #0275d8;
+	cursor: pointer;
+}
+
+#accordion h2:hover {
+	color: #025aa5;
+}
+
+#collapse-1,
+#collapse-2,
+#collapse-3,
+#collapse-4 {
+	font-size: 1.5rem;
+	color: 323031;
+}
+
+#collapse-1.hidden,
+#collapse-2.hidden,
+#collapse-3.hidden,
+#collapse-4.hidden {
+	display: none;
+}
+
+#collapse-1 p,
+#collapse-2 p,
+#collapse-3 p,
+#collapse-4 p {
+	padding: 10px 50px;
+}
+
+#shopping-list-form {
+	margin: 0 auto;
+	max-width: 768px;
+	font-weight: bold;
+}
+
+#shopping-list-form h1 {
+	font-family: 'Happy Monkey', cursive;
+	font-size: 3rem;
+}
+
+#food-to-add,
+#price-to-add {
+	padding: 10px;
+}
+
+#add-groceries {
+	padding: 10px;
+	border-radius: 15px;
+	color: #fff;
+	background-color: #5cb85c;
+	border: 1px solid #5cb85c;
+}
+
+#add-groceries:hover {
+	background-color: #449d44;
+	border-color: #419641;
+}
+
+#growing-food-list,
+#growing-price-list,
+#total-price {
+	font-weight: bold;
+	list-style-type: none;
+}
+
+#growing-food-list,
+#growing-price-list {
+	display: inline-block;
+}
